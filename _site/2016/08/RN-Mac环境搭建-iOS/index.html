@@ -6,17 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>Test My first blog</title>
-  <meta name="description" content="This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.Thi...">
+  <title>react-native Mac-iOS 开发环境搭建</title>
+  <meta name="description" content="  “Learn once, write anywhere” ，RN致力于在Javascript和React的基础上获得完全一致的开发体验，构建新型的原生APP.">
   <meta name="author" content="leopardpan">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Test My first blog">
-  <meta name="twitter:description" content="This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.Thi...">
+  <meta name="twitter:title" content="react-native Mac-iOS 开发环境搭建">
+  <meta name="twitter:description" content="  “Learn once, write anywhere” ，RN致力于在Javascript和React的基础上获得完全一致的开发体验，构建新型的原生APP.">
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Test My first blog">
-  <meta property="og:description" content="This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.Thi...">
+  <meta property="og:title" content="react-native Mac-iOS 开发环境搭建">
+  <meta property="og:description" content="  “Learn once, write anywhere” ，RN致力于在Javascript和React的基础上获得完全一致的开发体验，构建新型的原生APP.">
   
   <link rel="icon" type="image/png" href="/images/favicon.png" />
   <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="/css/main.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-  <link rel="canonical" href="http://localhost:4000/2016/09/sample-post.markdown/">
+  <link rel="canonical" href="http://localhost:4000/2016/08/RN-Mac%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-iOS/">
   <link rel="alternate" type="application/rss+xml" title="LL86" href="http://localhost:4000/feed.xml">
   
   <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
@@ -148,10 +148,10 @@
         <div class="content-wrapper__inner">
             <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title">Test My first blog</h1>
+    <h1 class="post-title">react-native Mac-iOS 开发环境搭建</h1>
     <div class="post-meta">
       <img src="/images/calendar.png" width="20px"/> 
-      <time datetime="2016-09-15 14:32:24 +0800" itemprop="datePublished" class="post-meta__date date">2016-09-15</time>  
+      <time datetime="2016-08-27 02:15:06 +0800" itemprop="datePublished" class="post-meta__date date">2016-08-27</time>  
          
       <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
     </p>
@@ -159,9 +159,88 @@
   </header>
 
   <section class="post">
-    <p>This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.</p>
+    <blockquote>
+  <p><em>“Learn once, write anywhere”</em> ，RN致力于在Javascript和React的基础上获得完全一致的开发体验，构建新型的原生APP.</p>
+</blockquote>
 
-<p>comments: ture</p>
+<blockquote>
+  <p><a href="https://facebook.github.io/react-native/docs/getting-started.html">RN英文版</a>和<a href="http://reactnative.cn/docs/0.31/getting-started.html">RN中文版</a>，这是我的参考学习资源，下面将会分享下关于我RN的一些开发环境配置，欢迎小伙伴一起学习进步。</p>
+</blockquote>
+
+<h2 id="dependencies-for-mac--ios">Dependencies for Mac + iOS</h2>
+
+<ul>
+  <li><strong>xocde</strong></li>
+</ul>
+
+<p>作为iOS开发者，相信小伙伴们最熟悉的IDE了，这个就不过多介绍了，需要的在App Store或是到Apple开发者官网上下载即可。需要注意的是React Native目前需要Xcode7.0 或更高版本。</p>
+
+<ul>
+  <li><strong>Homebrew</strong></li>
+</ul>
+
+<p><a href="https://brew.sh/">Homebrew</a>（<a href="https://www.zybuluo.com/phper/note/87055">常用使用方法</a>）, Mac系统的包管理器，能在Mac中方便的安装软件或者卸载软件，相当于linux下的apt-get、yum神器；Homebre可以在Mac上安装一些OS X没有的UNIX工具，Homebrew将这些工具统统安装到了 /usr/local/Cellar 目录中，并在 /usr/local/bin 中创建符号链接。这里我们用它来安装NodeJS和一些其他必需的工具软件，下面推荐自己在使用的配置，仅作参考。</p>
+
+<ul>
+  <li><strong>Node</strong></li>
+</ul>
+
+<p>使用上面的Homebrew来安装<a href="https://nodejs.org/en/">Node.js</a>，基于Chrome JavaScript 运行时建立的一个平台。关于[Node.js的资源学习]，可自行参考.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>brew install node
+</code></pre>
+</div>
+<ul>
+  <li><strong>React Native的命令行工具（react-native-cli）</strong></li>
+</ul>
+
+<p>React Native的命令行工具用于执行创建、初始化、更新项目、运行打包服务（packager）等任务。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npminstall -g react-native-cli
+</code></pre>
+</div>
+
+<p>注意：如果你看到EACCES: permission denied这样的权限报错，那么请参照上文的homebrew译注，修复/usr/local目录的所有权：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo chown -R `whoami` /usr/local
+</code></pre>
+</div>
+
+<ul>
+  <li><strong>Sublime Text</strong></li>
+</ul>
+
+<p>用于编写、运行和调试React Native应用，我自己用的是这个。</p>
+
+<p>React Native开发中推荐的一些插件：</p>
+
+<p>ReactJS : 支持React开发，代码提示，高亮显示</p>
+
+<p>Emmet ：前端开发必备。</p>
+
+<p>Terminal : 在sublime中打开终端并定位到当前目录，神器，mac下的快捷键为：command+shift+T</p>
+
+<p>react-native-snippets：react native 的代码片段</p>
+
+<p>当然还有Facebook提供的基于atom的<a href="https://nuclide.io/">Nuclide</a>，<a href="https://www.jetbrains.com/webstorm/">webstorm</a>，<a href="https://www.google.com.hk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0ahUKEwid5viAndzOAhWMFSwKHS6kCgAQFggcMAA&amp;url=https%3a%2f%2fcode%2evisualstudio%2ecom%2f&amp;usg=AFQjCNFJKyN71_pTGlo3tbjTpAWVghKtHg">Visual Studio Code</a>等编辑器。关于这几个编译器的配置推荐小伙伴可以参考这边文章“React Native 开发之 IDE 选型和配置”，自行选择使用学习。</p>
+
+<ul>
+  <li><strong>Watchman (推荐使用)</strong></li>
+</ul>
+
+<p>Watchman是由Facebook提供的监视文件系统变更的工具。安装此工具可以提高开发时的性能（packager可以快速捕捉文件的变化从而实现实时刷新）。</p>
+
+<ul>
+  <li><strong>Flow</strong></li>
+</ul>
+
+<p><a href="https://flow.org/">Flow</a>是一个静态的JS类型检查工具。</p>
+
+<p>注：你在很多示例中看到的奇奇怪怪的冒号问号，以及方法参数中像类型一样的写法，都是属于这个flow工具的语法。这一语法并不属于ES标准，只是Facebook自家的代码规范。所以新手可以直接跳过（即不需要安装这一工具，也不建议去费力学习flow相关语法）。</p>
+
+<hr />
+
+<p>以上基本就是我自己所搭建的环境，当然上面的一些工具也可以自行选择自己熟悉的。如果您有什么好的IDE欢迎交流推荐。另外，上面如果有未安装成功的小伙伴也可以留言给我，一起解决问题。</p>
 
 
 
@@ -242,8 +321,8 @@
     <script>
     
     var disqus_config = function () {
-        this.page.url = "http://localhost:4000/2016/09/sample-post.markdown/";
-        this.page.identifier = "/2016/09/sample-post.markdown/";
+        this.page.url = "http://localhost:4000/2016/08/RN-Mac%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-iOS/";
+        this.page.identifier = "/2016/08/RN-Mac%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-iOS/";
     };
 
     var disqus_shortname = 'LL86';

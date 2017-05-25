@@ -5,20 +5,101 @@
     <description>Success means Do a little bit more every day</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 23 May 2017 17:07:40 +0800</pubDate>
-    <lastBuildDate>Tue, 23 May 2017 17:07:40 +0800</lastBuildDate>
+    <pubDate>Thu, 25 May 2017 12:37:32 +0800</pubDate>
+    <lastBuildDate>Thu, 25 May 2017 12:37:32 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
-        <title>Test My first blog</title>
-        <description>&lt;p&gt;This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.This is just for test.&lt;/p&gt;
+        <title>react-native Mac-iOS 开发环境搭建</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;“Learn once, write anywhere”&lt;/em&gt; ，RN致力于在Javascript和React的基础上获得完全一致的开发体验，构建新型的原生APP.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;comments: ture&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://facebook.github.io/react-native/docs/getting-started.html&quot;&gt;RN英文版&lt;/a&gt;和&lt;a href=&quot;http://reactnative.cn/docs/0.31/getting-started.html&quot;&gt;RN中文版&lt;/a&gt;，这是我的参考学习资源，下面将会分享下关于我RN的一些开发环境配置，欢迎小伙伴一起学习进步。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;dependencies-for-mac--ios&quot;&gt;Dependencies for Mac + iOS&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;xocde&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;作为iOS开发者，相信小伙伴们最熟悉的IDE了，这个就不过多介绍了，需要的在App Store或是到Apple开发者官网上下载即可。需要注意的是React Native目前需要Xcode7.0 或更高版本。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Homebrew&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://brew.sh/&quot;&gt;Homebrew&lt;/a&gt;（&lt;a href=&quot;https://www.zybuluo.com/phper/note/87055&quot;&gt;常用使用方法&lt;/a&gt;）, Mac系统的包管理器，能在Mac中方便的安装软件或者卸载软件，相当于linux下的apt-get、yum神器；Homebre可以在Mac上安装一些OS X没有的UNIX工具，Homebrew将这些工具统统安装到了 /usr/local/Cellar 目录中，并在 /usr/local/bin 中创建符号链接。这里我们用它来安装NodeJS和一些其他必需的工具软件，下面推荐自己在使用的配置，仅作参考。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Node&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;使用上面的Homebrew来安装&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt;，基于Chrome JavaScript 运行时建立的一个平台。关于[Node.js的资源学习]，可自行参考.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install node
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;React Native的命令行工具（react-native-cli）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;React Native的命令行工具用于执行创建、初始化、更新项目、运行打包服务（packager）等任务。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npminstall -g react-native-cli
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;注意：如果你看到EACCES: permission denied这样的权限报错，那么请参照上文的homebrew译注，修复/usr/local目录的所有权：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo chown -R `whoami` /usr/local
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Sublime Text&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;用于编写、运行和调试React Native应用，我自己用的是这个。&lt;/p&gt;
+
+&lt;p&gt;React Native开发中推荐的一些插件：&lt;/p&gt;
+
+&lt;p&gt;ReactJS : 支持React开发，代码提示，高亮显示&lt;/p&gt;
+
+&lt;p&gt;Emmet ：前端开发必备。&lt;/p&gt;
+
+&lt;p&gt;Terminal : 在sublime中打开终端并定位到当前目录，神器，mac下的快捷键为：command+shift+T&lt;/p&gt;
+
+&lt;p&gt;react-native-snippets：react native 的代码片段&lt;/p&gt;
+
+&lt;p&gt;当然还有Facebook提供的基于atom的&lt;a href=&quot;https://nuclide.io/&quot;&gt;Nuclide&lt;/a&gt;，&lt;a href=&quot;https://www.jetbrains.com/webstorm/&quot;&gt;webstorm&lt;/a&gt;，&lt;a href=&quot;https://www.google.com.hk/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;ved=0ahUKEwid5viAndzOAhWMFSwKHS6kCgAQFggcMAA&amp;amp;url=https%3a%2f%2fcode%2evisualstudio%2ecom%2f&amp;amp;usg=AFQjCNFJKyN71_pTGlo3tbjTpAWVghKtHg&quot;&gt;Visual Studio Code&lt;/a&gt;等编辑器。关于这几个编译器的配置推荐小伙伴可以参考这边文章“React Native 开发之 IDE 选型和配置”，自行选择使用学习。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Watchman (推荐使用)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Watchman是由Facebook提供的监视文件系统变更的工具。安装此工具可以提高开发时的性能（packager可以快速捕捉文件的变化从而实现实时刷新）。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Flow&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://flow.org/&quot;&gt;Flow&lt;/a&gt;是一个静态的JS类型检查工具。&lt;/p&gt;
+
+&lt;p&gt;注：你在很多示例中看到的奇奇怪怪的冒号问号，以及方法参数中像类型一样的写法，都是属于这个flow工具的语法。这一语法并不属于ES标准，只是Facebook自家的代码规范。所以新手可以直接跳过（即不需要安装这一工具，也不建议去费力学习flow相关语法）。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;以上基本就是我自己所搭建的环境，当然上面的一些工具也可以自行选择自己熟悉的。如果您有什么好的IDE欢迎交流推荐。另外，上面如果有未安装成功的小伙伴也可以留言给我，一起解决问题。&lt;/p&gt;
 
 </description>
-        <pubDate>Thu, 15 Sep 2016 14:32:24 +0800</pubDate>
-        <link>http://localhost:4000/2016/09/sample-post.markdown/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/09/sample-post.markdown/</guid>
+        <pubDate>Sat, 27 Aug 2016 02:15:06 +0800</pubDate>
+        <link>http://localhost:4000/2016/08/RN-Mac%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-iOS/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/08/RN-Mac%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-iOS/</guid>
+        
+        <category>IDE配置</category>
         
         
       </item>
