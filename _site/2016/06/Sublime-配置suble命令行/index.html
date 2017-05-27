@@ -7,16 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>Sublime	配置subl命令行</title>
-  <meta name="description" content="  如果是在默认shell环境下    sudo ln -s "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl" /usr/bin/subl      ">
+  <meta name="description" content="  如果是在默认shell环境下">
   <meta name="author" content="leopardpan">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Sublime	配置subl命令行">
-  <meta name="twitter:description" content="  如果是在默认shell环境下    sudo ln -s "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl" /usr/bin/subl      ">
+  <meta name="twitter:description" content="  如果是在默认shell环境下">
   
   <meta property="og:type" content="article">
   <meta property="og:title" content="Sublime	配置subl命令行">
-  <meta property="og:description" content="  如果是在默认shell环境下    sudo ln -s "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl" /usr/bin/subl      ">
+  <meta property="og:description" content="  如果是在默认shell环境下">
   
   <link rel="icon" type="image/png" href="/images/favicon.png" />
   <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
@@ -160,34 +160,41 @@
 
   <section class="post">
     <ul>
-  <li>如果是在默认shell环境下
-    <div class="highlighter-rouge"><pre class="highlight"><code>sudo ln -s "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl" /usr/bin/subl
-</code></pre>
-    </div>
-  </li>
-  <li>使用zsh环境的可以使用以下命令
-    <div class="highlighter-rouge"><pre class="highlight"><code>alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
-alias nano="subl"
-export EDITOR="subl"
-</code></pre>
-    </div>
-  </li>
+  <li>如果是在默认shell环境下</li>
 </ul>
 
-<h3 id="subl-命令语法">subl 命令语法</h3>
-
-<p>用法:
-     subl [arguments] [files] 编辑指定的文件</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code> edit the given files or: subl [arguments] [directories] 打开指定的目录
-
- or: subl [arguments] - 编辑stdin
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo ln -s "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl" /usr/bin/subl
 </code></pre>
 </div>
 
-<p>参数Arguments:</p>
+<ul>
+  <li>使用zsh环境的可以使用以下命令</li>
+</ul>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>  --project : 载入指定的project
+<div class="highlighter-rouge"><pre class="highlight"><code>alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
+alias nano="subl"
+export EDITOR="subl"
+</code></pre>
+</div>
+
+<h3 id="subl-命令语法">subl 命令语法</h3>
+
+<ul>
+  <li>
+    <p>用法:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  subl [arguments] [files] 编辑指定的文件
+
+  edit the given files or: subl [arguments] [directories] 打开指定的目录
+
+  or: subl [arguments] - 编辑stdin
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>参数Arguments:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  --project : 载入指定的project
 
   --command : 运行指定的命令
 
@@ -205,9 +212,11 @@ export EDITOR="subl"
 
   -v or --version: 显示版本信息并退出
 </code></pre>
-</div>
+    </div>
 
-<p>如果从标准输入–wait是隐式的。 使用–stay当文件关闭是不切换到后台控制台(只与是否有等待的文件有关) 文件名可以通过加:line或者:line:column后缀来指定打开的定位</p>
+    <p>如果从标准输入–wait是隐式的。 使用–stay当文件关闭是不切换到后台控制台(只与是否有等待的文件有关) 文件名可以通过加:line或者:line:column后缀来指定打开的定位</p>
+  </li>
+</ul>
 
 
   </section>

@@ -5,8 +5,8 @@
     <description>Success means Do a little bit more every day</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 27 May 2017 10:58:28 +0800</pubDate>
-    <lastBuildDate>Sat, 27 May 2017 10:58:28 +0800</lastBuildDate>
+    <pubDate>Sat, 27 May 2017 11:05:08 +0800</pubDate>
+    <lastBuildDate>Sat, 27 May 2017 11:05:08 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -107,34 +107,41 @@
       <item>
         <title>Sublime	配置subl命令行</title>
         <description>&lt;ul&gt;
-  &lt;li&gt;如果是在默认shell环境下
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo ln -s &quot;/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl&quot; /usr/bin/subl
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;使用zsh环境的可以使用以下命令
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;alias subl=&quot;'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'&quot;
-alias nano=&quot;subl&quot;
-export EDITOR=&quot;subl&quot;
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/li&gt;
+  &lt;li&gt;如果是在默认shell环境下&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;subl-命令语法&quot;&gt;subl 命令语法&lt;/h3&gt;
-
-&lt;p&gt;用法:
-     subl [arguments] [files] 编辑指定的文件&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; edit the given files or: subl [arguments] [directories] 打开指定的目录
-
- or: subl [arguments] - 编辑stdin
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo ln -s &quot;/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl&quot; /usr/bin/subl
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;参数Arguments:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;使用zsh环境的可以使用以下命令&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  --project : 载入指定的project
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;alias subl=&quot;'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'&quot;
+alias nano=&quot;subl&quot;
+export EDITOR=&quot;subl&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;subl-命令语法&quot;&gt;subl 命令语法&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;用法:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  subl [arguments] [files] 编辑指定的文件
+
+  edit the given files or: subl [arguments] [directories] 打开指定的目录
+
+  or: subl [arguments] - 编辑stdin
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;参数Arguments:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  --project : 载入指定的project
 
   --command : 运行指定的命令
 
@@ -152,9 +159,11 @@ export EDITOR=&quot;subl&quot;
 
   -v or --version: 显示版本信息并退出
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+    &lt;/div&gt;
 
-&lt;p&gt;如果从标准输入–wait是隐式的。 使用–stay当文件关闭是不切换到后台控制台(只与是否有等待的文件有关) 文件名可以通过加:line或者:line:column后缀来指定打开的定位&lt;/p&gt;
+    &lt;p&gt;如果从标准输入–wait是隐式的。 使用–stay当文件关闭是不切换到后台控制台(只与是否有等待的文件有关) 文件名可以通过加:line或者:line:column后缀来指定打开的定位&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Mon, 27 Jun 2016 02:15:06 +0800</pubDate>
         <link>http://localhost:4000/2016/06/Sublime-%E9%85%8D%E7%BD%AEsuble%E5%91%BD%E4%BB%A4%E8%A1%8C/</link>
