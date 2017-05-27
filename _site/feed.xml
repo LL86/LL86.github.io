@@ -5,22 +5,9 @@
     <description>Success means Do a little bit more every day</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 25 May 2017 14:38:29 +0800</pubDate>
-    <lastBuildDate>Thu, 25 May 2017 14:38:29 +0800</lastBuildDate>
+    <pubDate>Sat, 27 May 2017 10:58:28 +0800</pubDate>
+    <lastBuildDate>Sat, 27 May 2017 10:58:28 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
-    
-      <item>
-        <title>iOS 10 跳转系统设置问题</title>
-        <description>
-</description>
-        <pubDate>Sun, 11 Sep 2016 02:15:06 +0800</pubDate>
-        <link>http://localhost:4000/2016/09/iOS-10-%E8%B7%B3%E8%BD%AC%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/09/iOS-10-%E8%B7%B3%E8%BD%AC%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/</guid>
-        
-        <category>iOS</category>
-        
-        
-      </item>
     
       <item>
         <title>react-native Mac-iOS 开发环境搭建</title>
@@ -50,7 +37,7 @@
   &lt;li&gt;&lt;strong&gt;Node&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;使用上面的Homebrew来安装&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt;，基于Chrome JavaScript 运行时建立的一个平台。关于[Node.js的资源学习]，可自行参考.&lt;/p&gt;
+&lt;p&gt;使用上面的Homebrew来安装&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt;，基于Chrome JavaScript 运行时建立的一个平台。关于&lt;a href=&quot;http://www.runoob.com/nodejs/nodejs-tutorial.html&quot;&gt;Node.js的资源学习&lt;/a&gt;，可自行参考.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install node
 &lt;/code&gt;&lt;/pre&gt;
@@ -87,7 +74,7 @@
 
 &lt;p&gt;react-native-snippets：react native 的代码片段&lt;/p&gt;
 
-&lt;p&gt;当然还有Facebook提供的基于atom的&lt;a href=&quot;https://nuclide.io/&quot;&gt;Nuclide&lt;/a&gt;，&lt;a href=&quot;https://www.jetbrains.com/webstorm/&quot;&gt;webstorm&lt;/a&gt;，&lt;a href=&quot;https://www.google.com.hk/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;ved=0ahUKEwid5viAndzOAhWMFSwKHS6kCgAQFggcMAA&amp;amp;url=https%3a%2f%2fcode%2evisualstudio%2ecom%2f&amp;amp;usg=AFQjCNFJKyN71_pTGlo3tbjTpAWVghKtHg&quot;&gt;Visual Studio Code&lt;/a&gt;等编辑器。关于这几个编译器的配置推荐小伙伴可以参考这边文章“React Native 开发之 IDE 选型和配置”，自行选择使用学习。&lt;/p&gt;
+&lt;p&gt;当然还有Facebook提供的基于atom的&lt;a href=&quot;https://nuclide.io/&quot;&gt;Nuclide&lt;/a&gt;，&lt;a href=&quot;https://www.jetbrains.com/webstorm/&quot;&gt;webstorm&lt;/a&gt;，&lt;a href=&quot;https://www.google.com.hk/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;ved=0ahUKEwid5viAndzOAhWMFSwKHS6kCgAQFggcMAA&amp;amp;url=https%3a%2f%2fcode%2evisualstudio%2ecom%2f&amp;amp;usg=AFQjCNFJKyN71_pTGlo3tbjTpAWVghKtHg&quot;&gt;Visual Studio Code&lt;/a&gt;等编辑器。关于这几个编译器的配置推荐小伙伴可以参考这边文章&lt;a href=&quot;http://www.infoq.com/cn/articles/react-native-ide&quot;&gt;React Native 开发之 IDE 选型和配置&lt;/a&gt;，自行选择使用学习。&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Watchman (推荐使用)&lt;/strong&gt;&lt;/li&gt;
@@ -111,6 +98,67 @@
         <pubDate>Sat, 27 Aug 2016 02:15:06 +0800</pubDate>
         <link>http://localhost:4000/2016/08/RN-Mac%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-iOS/</link>
         <guid isPermaLink="true">http://localhost:4000/2016/08/RN-Mac%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-iOS/</guid>
+        
+        <category>IDE配置</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Sublime	配置subl命令行</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;如果是在默认shell环境下
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo ln -s &quot;/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl&quot; /usr/bin/subl
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;使用zsh环境的可以使用以下命令
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;alias subl=&quot;'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'&quot;
+alias nano=&quot;subl&quot;
+export EDITOR=&quot;subl&quot;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;subl-命令语法&quot;&gt;subl 命令语法&lt;/h3&gt;
+
+&lt;p&gt;用法:
+     subl [arguments] [files] 编辑指定的文件&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; edit the given files or: subl [arguments] [directories] 打开指定的目录
+
+ or: subl [arguments] - 编辑stdin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;参数Arguments:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  --project : 载入指定的project
+
+  --command : 运行指定的命令
+
+  -n or --new-window: 打开一个新的窗口
+ 
+  -a or --add: 添加文件夹到当前窗口
+  
+  -w or --wait: 返回前等待文件关闭
+ 
+  -b or --background: 不激活该应用程序
+
+  -s or --stay: 文件关闭后保持应用程序激活状态
+
+  -h or --help: 显示帮助并退出
+
+  -v or --version: 显示版本信息并退出
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;如果从标准输入–wait是隐式的。 使用–stay当文件关闭是不切换到后台控制台(只与是否有等待的文件有关) 文件名可以通过加:line或者:line:column后缀来指定打开的定位&lt;/p&gt;
+</description>
+        <pubDate>Mon, 27 Jun 2016 02:15:06 +0800</pubDate>
+        <link>http://localhost:4000/2016/06/Sublime-%E9%85%8D%E7%BD%AEsuble%E5%91%BD%E4%BB%A4%E8%A1%8C/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/06/Sublime-%E9%85%8D%E7%BD%AEsuble%E5%91%BD%E4%BB%A4%E8%A1%8C/</guid>
         
         <category>IDE配置</category>
         

@@ -6,17 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>iOS 10 跳转系统设置问题</title>
-  <meta name="description" content="">
+  <title>Sublime	配置subl命令行</title>
+  <meta name="description" content="  如果是在默认shell环境下    sudo ln -s "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl" /usr/bin/subl      ">
   <meta name="author" content="leopardpan">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="iOS 10 跳转系统设置问题">
-  <meta name="twitter:description" content="">
+  <meta name="twitter:title" content="Sublime	配置subl命令行">
+  <meta name="twitter:description" content="  如果是在默认shell环境下    sudo ln -s "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl" /usr/bin/subl      ">
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="iOS 10 跳转系统设置问题">
-  <meta property="og:description" content="">
+  <meta property="og:title" content="Sublime	配置subl命令行">
+  <meta property="og:description" content="  如果是在默认shell环境下    sudo ln -s "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl" /usr/bin/subl      ">
   
   <link rel="icon" type="image/png" href="/images/favicon.png" />
   <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="/css/main.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-  <link rel="canonical" href="http://localhost:4000/2016/09/iOS-10-%E8%B7%B3%E8%BD%AC%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/">
+  <link rel="canonical" href="http://localhost:4000/2016/06/Sublime-%E9%85%8D%E7%BD%AEsuble%E5%91%BD%E4%BB%A4%E8%A1%8C/">
   <link rel="alternate" type="application/rss+xml" title="LL86" href="http://localhost:4000/feed.xml">
   
   <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
@@ -148,10 +148,10 @@
         <div class="content-wrapper__inner">
             <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title">iOS 10 跳转系统设置问题</h1>
+    <h1 class="post-title">Sublime	配置subl命令行</h1>
     <div class="post-meta">
       <img src="/images/calendar.png" width="20px"/> 
-      <time datetime="2016-09-11 02:15:06 +0800" itemprop="datePublished" class="post-meta__date date">2016-09-11</time>  
+      <time datetime="2016-06-27 02:15:06 +0800" itemprop="datePublished" class="post-meta__date date">2016-06-27</time>  
          
       <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
     </p>
@@ -159,7 +159,55 @@
   </header>
 
   <section class="post">
-    
+    <ul>
+  <li>如果是在默认shell环境下
+    <div class="highlighter-rouge"><pre class="highlight"><code>sudo ln -s "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl" /usr/bin/subl
+</code></pre>
+    </div>
+  </li>
+  <li>使用zsh环境的可以使用以下命令
+    <div class="highlighter-rouge"><pre class="highlight"><code>alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
+alias nano="subl"
+export EDITOR="subl"
+</code></pre>
+    </div>
+  </li>
+</ul>
+
+<h3 id="subl-命令语法">subl 命令语法</h3>
+
+<p>用法:
+     subl [arguments] [files] 编辑指定的文件</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code> edit the given files or: subl [arguments] [directories] 打开指定的目录
+
+ or: subl [arguments] - 编辑stdin
+</code></pre>
+</div>
+
+<p>参数Arguments:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  --project : 载入指定的project
+
+  --command : 运行指定的命令
+
+  -n or --new-window: 打开一个新的窗口
+ 
+  -a or --add: 添加文件夹到当前窗口
+  
+  -w or --wait: 返回前等待文件关闭
+ 
+  -b or --background: 不激活该应用程序
+
+  -s or --stay: 文件关闭后保持应用程序激活状态
+
+  -h or --help: 显示帮助并退出
+
+  -v or --version: 显示版本信息并退出
+</code></pre>
+</div>
+
+<p>如果从标准输入–wait是隐式的。 使用–stay当文件关闭是不切换到后台控制台(只与是否有等待的文件有关) 文件名可以通过加:line或者:line:column后缀来指定打开的定位</p>
 
 
   </section>
@@ -228,11 +276,11 @@
 
        <ul class="pager">
         
-        <li class="previous">
-            <a href="/2016/08/RN-Mac%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-iOS/" data-toggle="tooltip" data-placement="top" title="react-native Mac-iOS 开发环境搭建">上一篇：  <span>react-native Mac-iOS 开发环境搭建</span>
+        
+        <li class="next">
+            <a href="/2016/08/RN-Mac%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-iOS/" data-toggle="tooltip" data-placement="top" title="react-native Mac-iOS 开发环境搭建">下一篇：  <span>react-native Mac-iOS 开发环境搭建</span>
             </a>
         </li>
-        
         
     </ul>
 </section>
@@ -244,8 +292,8 @@
     <script>
     
     var disqus_config = function () {
-        this.page.url = "http://localhost:4000/2016/09/iOS-10-%E8%B7%B3%E8%BD%AC%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/";
-        this.page.identifier = "/2016/09/iOS-10-%E8%B7%B3%E8%BD%AC%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/";
+        this.page.url = "http://localhost:4000/2016/06/Sublime-%E9%85%8D%E7%BD%AEsuble%E5%91%BD%E4%BB%A4%E8%A1%8C/";
+        this.page.identifier = "/2016/06/Sublime-%E9%85%8D%E7%BD%AEsuble%E5%91%BD%E4%BB%A4%E8%A1%8C/";
     };
 
     var disqus_shortname = 'LL86';
