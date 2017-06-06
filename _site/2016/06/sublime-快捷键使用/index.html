@@ -6,17 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>Sublime	配置subl命令行</title>
-  <meta name="description" content="  如果是在默认shell环境下">
+  <title>sublime 快捷键使用</title>
+  <meta name="description" content="交换光标处文本：ctrl + t">
   <meta name="author" content="leopardpan">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Sublime	配置subl命令行">
-  <meta name="twitter:description" content="  如果是在默认shell环境下">
+  <meta name="twitter:title" content="sublime 快捷键使用">
+  <meta name="twitter:description" content="交换光标处文本：ctrl + t">
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Sublime	配置subl命令行">
-  <meta property="og:description" content="  如果是在默认shell环境下">
+  <meta property="og:title" content="sublime 快捷键使用">
+  <meta property="og:description" content="交换光标处文本：ctrl + t">
   
   <link rel="icon" type="image/png" href="/images/favicon.png" />
   <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="/css/main.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-  <link rel="canonical" href="http://localhost:4000/2016/06/Sublime-%E9%85%8D%E7%BD%AEsuble%E5%91%BD%E4%BB%A4%E8%A1%8C/">
+  <link rel="canonical" href="http://localhost:4000/2016/06/sublime-%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%BD%BF%E7%94%A8/">
   <link rel="alternate" type="application/rss+xml" title="LL86" href="http://localhost:4000/feed.xml">
   
   <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
@@ -148,10 +148,10 @@
         <div class="content-wrapper__inner">
             <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title">Sublime	配置subl命令行</h1>
+    <h1 class="post-title">sublime 快捷键使用</h1>
     <div class="post-meta">
       <img src="/images/calendar.png" width="20px"/> 
-      <time datetime="2016-06-27 02:15:06 +0800" itemprop="datePublished" class="post-meta__date date">2016-06-27</time>  
+      <time datetime="2016-06-26 23:15:06 +0800" itemprop="datePublished" class="post-meta__date date">2016-06-26</time>  
          
       <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
     </p>
@@ -159,64 +159,29 @@
   </header>
 
   <section class="post">
-    <ul>
-  <li>如果是在默认shell环境下</li>
-</ul>
+    <p>交换光标处文本：ctrl + t</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo ln -s "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl" /usr/bin/subl
-</code></pre>
-</div>
+<p>清屏1：command + r</p>
 
-<ul>
-  <li>使用zsh环境的可以使用以下命令</li>
-</ul>
+<p>清屏2：ctrl + l</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
-alias nano="subl"
-export EDITOR="subl"
-</code></pre>
-</div>
+<p>⌘ + 数字在各 tab 标签直接来回切换</p>
 
-<h3 id="subl-命令语法">subl 命令语法</h3>
+<p>选择即复制 + 鼠标中键粘贴，这个很实用</p>
 
-<ul>
-  <li>
-    <p>用法:</p>
+<p>⌘ + f 所查找的内容会被自动复制</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>  subl [arguments] [files] 编辑指定的文件
+<p>⌘ + d 横着分屏 / ⌘ + shift + d 竖着分屏</p>
 
-  edit the given files or: subl [arguments] [directories] 打开指定的目录
+<p>⌘ + r = clear，而且只是换到新一屏，不会想 clear 一样创建一个空屏</p>
 
-  or: subl [arguments] - 编辑stdin
-</code></pre>
-    </div>
-  </li>
-  <li>
-    <p>参数Arguments:</p>
+<p>ctrl + u 清空当前行，无论光标在什么位置</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>  --project : 载入指定的project
+<p>输入开头命令后 按 ⌘ + ; 会自动列出输入过的命令</p>
 
-  --command : 运行指定的命令
+<p>⌘ + shift + h 会列出剪切板历史</p>
 
-  -n or --new-window: 打开一个新的窗口
- 
-  -a or --add: 添加文件夹到当前窗口
-  
-  -w or --wait: 返回前等待文件关闭
- 
-  -b or --background: 不激活该应用程序
-
-  -s or --stay: 文件关闭后保持应用程序激活状态
-
-  -h or --help: 显示帮助并退出
-
-  -v or --version: 显示版本信息并退出
-</code></pre>
-    </div>
-
-    <p>如果从标准输入–wait是隐式的。 使用–stay当文件关闭是不切换到后台控制台(只与是否有等待的文件有关) 文件名可以通过加:line或者:line:column后缀来指定打开的定位</p>
-  </li>
-</ul>
+<p>可以在 Preferences &gt; keys 设置全局快捷键调出 iterm，这个也可以用过 Alfred 实现</p>
 
 
   </section>
@@ -285,14 +250,9 @@ export EDITOR="subl"
 
        <ul class="pager">
         
-        <li class="previous">
-            <a href="/2016/06/sublime-%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%BD%BF%E7%94%A8/" data-toggle="tooltip" data-placement="top" title="sublime 快捷键使用">上一篇：  <span>sublime 快捷键使用</span>
-            </a>
-        </li>
-        
         
         <li class="next">
-            <a href="/2016/08/RN-Mac%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-iOS/" data-toggle="tooltip" data-placement="top" title="react-native Mac-iOS 开发环境搭建">下一篇：  <span>react-native Mac-iOS 开发环境搭建</span>
+            <a href="/2016/06/Sublime-%E9%85%8D%E7%BD%AEsuble%E5%91%BD%E4%BB%A4%E8%A1%8C/" data-toggle="tooltip" data-placement="top" title="Sublime	配置subl命令行">下一篇：  <span>Sublime	配置subl命令行</span>
             </a>
         </li>
         
@@ -306,8 +266,8 @@ export EDITOR="subl"
     <script>
     
     var disqus_config = function () {
-        this.page.url = "http://localhost:4000/2016/06/Sublime-%E9%85%8D%E7%BD%AEsuble%E5%91%BD%E4%BB%A4%E8%A1%8C/";
-        this.page.identifier = "/2016/06/Sublime-%E9%85%8D%E7%BD%AEsuble%E5%91%BD%E4%BB%A4%E8%A1%8C/";
+        this.page.url = "http://localhost:4000/2016/06/sublime-%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%BD%BF%E7%94%A8/";
+        this.page.identifier = "/2016/06/sublime-%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%BD%BF%E7%94%A8/";
     };
 
     var disqus_shortname = 'LL86';

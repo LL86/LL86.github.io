@@ -3,7 +3,7 @@ layout: post
 title: "Sublime	配置subl命令行"
 date: 2016-06-26 18:15:06 
 description: "Sublime 配置subl命令行 "
-tag: IDE配置
+tag: IDE使用及配置
 ---
 
 * 如果是在默认shell环境下

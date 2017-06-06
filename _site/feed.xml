@@ -5,8 +5,8 @@
     <description>Success means Do a little bit more every day</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 27 May 2017 11:05:08 +0800</pubDate>
-    <lastBuildDate>Sat, 27 May 2017 11:05:08 +0800</lastBuildDate>
+    <pubDate>Tue, 06 Jun 2017 15:16:58 +0800</pubDate>
+    <lastBuildDate>Tue, 06 Jun 2017 15:16:58 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -99,7 +99,7 @@
         <link>http://localhost:4000/2016/08/RN-Mac%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-iOS/</link>
         <guid isPermaLink="true">http://localhost:4000/2016/08/RN-Mac%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-iOS/</guid>
         
-        <category>IDE配置</category>
+        <category>IDE使用及配置</category>
         
         
       </item>
@@ -169,7 +169,42 @@ export EDITOR=&quot;subl&quot;
         <link>http://localhost:4000/2016/06/Sublime-%E9%85%8D%E7%BD%AEsuble%E5%91%BD%E4%BB%A4%E8%A1%8C/</link>
         <guid isPermaLink="true">http://localhost:4000/2016/06/Sublime-%E9%85%8D%E7%BD%AEsuble%E5%91%BD%E4%BB%A4%E8%A1%8C/</guid>
         
-        <category>IDE配置</category>
+        <category>IDE使用及配置</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>sublime 快捷键使用</title>
+        <description>&lt;p&gt;交换光标处文本：ctrl + t&lt;/p&gt;
+
+&lt;p&gt;清屏1：command + r&lt;/p&gt;
+
+&lt;p&gt;清屏2：ctrl + l&lt;/p&gt;
+
+&lt;p&gt;⌘ + 数字在各 tab 标签直接来回切换&lt;/p&gt;
+
+&lt;p&gt;选择即复制 + 鼠标中键粘贴，这个很实用&lt;/p&gt;
+
+&lt;p&gt;⌘ + f 所查找的内容会被自动复制&lt;/p&gt;
+
+&lt;p&gt;⌘ + d 横着分屏 / ⌘ + shift + d 竖着分屏&lt;/p&gt;
+
+&lt;p&gt;⌘ + r = clear，而且只是换到新一屏，不会想 clear 一样创建一个空屏&lt;/p&gt;
+
+&lt;p&gt;ctrl + u 清空当前行，无论光标在什么位置&lt;/p&gt;
+
+&lt;p&gt;输入开头命令后 按 ⌘ + ; 会自动列出输入过的命令&lt;/p&gt;
+
+&lt;p&gt;⌘ + shift + h 会列出剪切板历史&lt;/p&gt;
+
+&lt;p&gt;可以在 Preferences &amp;gt; keys 设置全局快捷键调出 iterm，这个也可以用过 Alfred 实现&lt;/p&gt;
+</description>
+        <pubDate>Sun, 26 Jun 2016 23:15:06 +0800</pubDate>
+        <link>http://localhost:4000/2016/06/sublime-%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%BD%BF%E7%94%A8/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/06/sublime-%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%BD%BF%E7%94%A8/</guid>
+        
+        <category>IDE使用及配置</category>
         
         
       </item>
