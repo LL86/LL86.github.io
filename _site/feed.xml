@@ -5,9 +5,84 @@
     <description>Success means Do a little bit more every day</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 06 Jun 2017 15:16:58 +0800</pubDate>
-    <lastBuildDate>Tue, 06 Jun 2017 15:16:58 +0800</lastBuildDate>
+    <pubDate>Wed, 14 Jun 2017 17:21:59 +0800</pubDate>
+    <lastBuildDate>Wed, 14 Jun 2017 17:21:59 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>iOS 11 SDK新特性记录</title>
+        <description>&lt;h3 id=&quot;arkit&quot;&gt;&lt;a href=&quot;https://developer.apple.com/documentation/arkit&quot;&gt;ARKit&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://dn-mhke0kuv.qbox.me/5600f4a9b69ce3fe99cf&quot; alt=&quot;AR&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;还记得之前支付宝和QQ的AR红包活动，包括去年大火的Pokémon Go AR游戏面世，这项技术应用到iOS端，渐渐吸引了我们的目光。&lt;/p&gt;
+
+&lt;p&gt;今年的WWDC现场的演示也向我们展示了这项技术可能良好前景，ARKit是一套并不很复杂的 API。涉及的 View 几乎是作为 SceneKit 的延伸，再加上在真实世界的定为也已经由系统帮助处理，开发者需要做的大抵就是将虚拟物体放在屏幕的合适位置，并让物体之间互动。而利用 Core ML 来对相机内的实际物体进行识别和交互，可以说也让各类特效的相机或者摄影 app 充满了想像空间。&lt;/p&gt;
+
+&lt;p&gt;所以ARKit极大降低了普通开发者玩 AR 的门槛，也是 Apple 现阶段用来抗衡 VR 的选项。可以畅想一下更多类似 Pokémon Go 的 AR 游戏 (结合实境的虚拟宠物什么的大概是最容易想到的) 能在 ARKit 和 SceneKit 的帮助下面世，甚至在 iPad Pro 现有技能上做像是 AR 电影这样能全方位展示的多媒体可能也不再是单纯的梦想。&lt;/p&gt;
+
+&lt;h3 id=&quot;core-ml&quot;&gt;&lt;a href=&quot;https://developer.apple.com/machine-learning/&quot;&gt;Core ML&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;使用 Core ML，可以将训练好的机器学习模型整合到你的应用中。简单来说就是使用大量已有的数据和正确的结果，来对建造的模型进行训练或改进，使模型具有实际的使用价值。比如一条街道的完全信息覆盖，训练模型可以看做是该街道所有店面、公共设施的数据信息（比如地理位置），通过大量的数据整合到训练模型中，你就可以通过简单的一些输入信息，来获取特定的输出结果。因此Core ML 所扮演的角色就是是将已经训练好的模型转换为 iOS 可以理解的形式，并且将新的数据“喂给”模型，从而获取输出。&lt;/p&gt;
+
+&lt;p&gt;Core ML 在背后驱动了 iOS 的视觉识别的 Vision 框架和 Foundation 中的语义分析相关 API。普通开发者可以从这些高层的 API 中直接获益，比如人脸图片或者文字识别等。这部分内容在以前版本的 SDK 中也存在，不过在 iOS 11 SDK 中它们被集中到了新的框架中，并将一些更具体和底层的控制开放出来。比如你可以使用 Vision 中的高层接口，但是同时指定底层所使用的模型。这给 iOS 的计算机视觉带来了新的可能。这方面可以参考下&lt;a href=&quot;https://juejin.im/entry/5937d251a0bb9f005807c582&quot;&gt;这篇关于Core ML应用&lt;/a&gt;;&lt;/p&gt;
+
+&lt;h3 id=&quot;小知识点&quot;&gt;小知识点&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/documentation/uikit/drag_and_drop&quot;&gt;拖拽 - Drag and Drop&lt;/a&gt; 
+&lt;img src=&quot;https://docs-assets.developer.apple.com/published/d8a3490e51/5feafe54-90b2-4bd0-9593-3f0ea138df4c.png&quot; alt=&quot;drag in pad&quot; /&gt;
+    &lt;ol&gt;
+      &lt;li&gt;在具有分屏功能的pad中，该功能具有很好的表现力，而iPhone上，则只体现在单个应用程序中。&lt;/li&gt;
+      &lt;li&gt;如原生支持拖拽的UITextView 和 UITextField，UICollectionView 和 UITableView的拖拽有一系列专用的 delegate 来表明拖拽的发生和结束。而你也可以对任意 UIView 子类定义拖拽行为。&lt;/li&gt;
+      &lt;li&gt;和 mac 上的拖拽不同，iOS 的拖拽充分尊重了多点触控的屏幕，所以可能你需要对一次多个的拖拽行为做些特别处理。&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://developer.apple.com/videos/play/wwdc2017/206/&quot;&gt;Auto Fill&lt;/a&gt; - UITextInputTraits 的 textContentType 中添加了 username 和 password，对适合的 textView 或者 textField 的 contentType 进行配置，就可以在要求输入用户名密码时获取键盘上方的自动填充，帮助用户快速登录，提供更友好的用户体验。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://developer.apple.com/documentation/fileprovider&quot;&gt;FileProvider&lt;/a&gt; 和 &lt;a href=&quot;https://developer.apple.com/documentation/fileprovider&quot;&gt;FileProviderUI&lt;/a&gt; - 开放了让其他应用程序访问由包含的应用程序存储和管理的文档和目录。
+FileProviderUI则提供了一套类似Files app的界面，让你可以获取用户设备上或者云端的文件，具体还没测，读者可以亲自测试下试试。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;不再支持 32 位 app - 虽然在 beta 1 中依然可以运行 32 位 app，但是 Apple 明确指出了将在后续的 iOS 11 beta 中取消支持。所以如果你想让自己的程序运行在 iOS 11 的设备上，进行 64 位的重新编译是必须步骤。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://developer.apple.com/documentation/devicecheck&quot;&gt;DeviceCheck&lt;/a&gt; - 每天要用广告 ID 追踪用户的开发者现在有了更好地选择 (当然前提是用来做正经事儿)。该FrameWork允许你通过你的服务器与 Apple 服务器通讯，并为单个设备设置两个 bit 的数据。简单说，你在设备上用 DeviceCheck API 生成一个 token，然后将这个 token 发给自己的服务器，再由自己的服务器与 Apple 的 API 进行通讯，来更新或者查询该设备的值。这两个 bit 的数据用来追踪用户比如是否已经领取奖励这类信息。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://developer.apple.com/documentation/pdfkit&quot;&gt;PDFKit&lt;/a&gt; - 这是一个在 macOS 上已经长期存在的框架，但却在 iOS 上姗姗来迟。你可以使用这个框架显示和操作 pdf 文件。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://developer.apple.com/documentation/identitylookup&quot;&gt;IdentityLookup&lt;/a&gt; - 可以自己开发一个 app extension 来拦截系统 SMS 和 MMS 的信息。系统的信息 app 在接到未知的人的短信时，会询问所有开启的过滤扩展，如果扩展表示该消息应当被拦截，那么这则信息将不会传递给你。扩展有机会访问到事先指定的 server 来进行判断 (所以说你可以光明正大地获取用户短信内容了，不过当然考虑到隐私，这些访问都是匿名加密的，Apple 也禁止这类扩展在 container 里进行写入)。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/documentation/corenfc&quot;&gt;Core NFC&lt;/a&gt; - 在 iPhone 7 和 iPhone 7 Plus 上提供基础的近场通讯读取功能。看起来很 promising，只要你有合适的 NFC 标签，手机就可以进行读取。但是考虑到无法后台常驻，实用性就打了折扣。不过笔者不是很熟这块，也许能有更合适的场景也未可知。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;xcode&quot;&gt;xcode&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;编辑器和编译器&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Xcode 9 中编辑器进行了重写，支持了对 Swift 代码的重构 (虽然还很基础)，将 VCS 提到了更重要的位置，并添加了 GitHub 集成，可以进行同局域网的无线部署和调试。
+Xcode 9 中的索引系统也使用了新的引擎，据称在大型项目中搜索最高可以达到 50 倍的速度。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Named Color&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-gold-cdn.xitu.io/2017/6/6/7d2b28f4fafadf52b165dac094169dab&quot; alt=&quot;xcassets 里添加颜色&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 13 Jun 2017 02:15:06 +0800</pubDate>
+        <link>http://localhost:4000/2017/06/iOS-11-SDK%E6%96%B0%E7%89%B9%E6%80%A7/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/06/iOS-11-SDK%E6%96%B0%E7%89%B9%E6%80%A7/</guid>
+        
+        <category>iOS</category>
+        
+        
+      </item>
     
       <item>
         <title>react-native Mac-iOS 开发环境搭建</title>
@@ -165,7 +240,7 @@ export EDITOR=&quot;subl&quot;
   &lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Mon, 27 Jun 2016 02:15:06 +0800</pubDate>
+        <pubDate>Fri, 24 Jun 2016 02:15:06 +0800</pubDate>
         <link>http://localhost:4000/2016/06/Sublime-%E9%85%8D%E7%BD%AEsuble%E5%91%BD%E4%BB%A4%E8%A1%8C/</link>
         <guid isPermaLink="true">http://localhost:4000/2016/06/Sublime-%E9%85%8D%E7%BD%AEsuble%E5%91%BD%E4%BB%A4%E8%A1%8C/</guid>
         
@@ -200,9 +275,9 @@ export EDITOR=&quot;subl&quot;
 
 &lt;p&gt;可以在 Preferences &amp;gt; keys 设置全局快捷键调出 iterm，这个也可以用过 Alfred 实现&lt;/p&gt;
 </description>
-        <pubDate>Sun, 26 Jun 2016 23:15:06 +0800</pubDate>
-        <link>http://localhost:4000/2016/06/sublime-%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%BD%BF%E7%94%A8/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/06/sublime-%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%BD%BF%E7%94%A8/</guid>
+        <pubDate>Fri, 22 Apr 2016 23:15:06 +0800</pubDate>
+        <link>http://localhost:4000/2016/04/sublime-%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%BD%BF%E7%94%A8/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/04/sublime-%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%BD%BF%E7%94%A8/</guid>
         
         <category>IDE使用及配置</category>
         

@@ -6,17 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>react-native Mac-iOS 开发环境搭建</title>
-  <meta name="description" content="  “Learn once, write anywhere” ，RN致力于在Javascript和React的基础上获得完全一致的开发体验，构建新型的原生APP.">
+  <title>iOS 11 SDK新特性记录</title>
+  <meta name="description" content="ARKit">
   <meta name="author" content="leopardpan">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="react-native Mac-iOS 开发环境搭建">
-  <meta name="twitter:description" content="  “Learn once, write anywhere” ，RN致力于在Javascript和React的基础上获得完全一致的开发体验，构建新型的原生APP.">
+  <meta name="twitter:title" content="iOS 11 SDK新特性记录">
+  <meta name="twitter:description" content="ARKit">
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="react-native Mac-iOS 开发环境搭建">
-  <meta property="og:description" content="  “Learn once, write anywhere” ，RN致力于在Javascript和React的基础上获得完全一致的开发体验，构建新型的原生APP.">
+  <meta property="og:title" content="iOS 11 SDK新特性记录">
+  <meta property="og:description" content="ARKit">
   
   <link rel="icon" type="image/png" href="/images/favicon.png" />
   <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="/css/main.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-  <link rel="canonical" href="http://localhost:4000/2016/08/RN-Mac%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-iOS/">
+  <link rel="canonical" href="http://localhost:4000/2017/06/iOS-11-SDK%E6%96%B0%E7%89%B9%E6%80%A7/">
   <link rel="alternate" type="application/rss+xml" title="LL86" href="http://localhost:4000/feed.xml">
   
   <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
@@ -148,10 +148,10 @@
         <div class="content-wrapper__inner">
             <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title">react-native Mac-iOS 开发环境搭建</h1>
+    <h1 class="post-title">iOS 11 SDK新特性记录</h1>
     <div class="post-meta">
       <img src="/images/calendar.png" width="20px"/> 
-      <time datetime="2016-08-27 02:15:06 +0800" itemprop="datePublished" class="post-meta__date date">2016-08-27</time>  
+      <time datetime="2017-06-13 02:15:06 +0800" itemprop="datePublished" class="post-meta__date date">2017-06-13</time>  
          
       <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
     </p>
@@ -159,88 +159,68 @@
   </header>
 
   <section class="post">
-    <blockquote>
-  <p><em>“Learn once, write anywhere”</em> ，RN致力于在Javascript和React的基础上获得完全一致的开发体验，构建新型的原生APP.</p>
-</blockquote>
+    <h3 id="arkit"><a href="https://developer.apple.com/documentation/arkit">ARKit</a></h3>
 
-<blockquote>
-  <p><a href="https://facebook.github.io/react-native/docs/getting-started.html">RN英文版</a>和<a href="http://reactnative.cn/docs/0.31/getting-started.html">RN中文版</a>，这是我的参考学习资源，下面将会分享下关于我RN的一些开发环境配置，欢迎小伙伴一起学习进步。</p>
-</blockquote>
+<p><img src="https://dn-mhke0kuv.qbox.me/5600f4a9b69ce3fe99cf" alt="AR" /></p>
 
-<h2 id="dependencies-for-mac--ios">Dependencies for Mac + iOS</h2>
+<p>还记得之前支付宝和QQ的AR红包活动，包括去年大火的Pokémon Go AR游戏面世，这项技术应用到iOS端，渐渐吸引了我们的目光。</p>
 
+<p>今年的WWDC现场的演示也向我们展示了这项技术可能良好前景，ARKit是一套并不很复杂的 API。涉及的 View 几乎是作为 SceneKit 的延伸，再加上在真实世界的定为也已经由系统帮助处理，开发者需要做的大抵就是将虚拟物体放在屏幕的合适位置，并让物体之间互动。而利用 Core ML 来对相机内的实际物体进行识别和交互，可以说也让各类特效的相机或者摄影 app 充满了想像空间。</p>
+
+<p>所以ARKit极大降低了普通开发者玩 AR 的门槛，也是 Apple 现阶段用来抗衡 VR 的选项。可以畅想一下更多类似 Pokémon Go 的 AR 游戏 (结合实境的虚拟宠物什么的大概是最容易想到的) 能在 ARKit 和 SceneKit 的帮助下面世，甚至在 iPad Pro 现有技能上做像是 AR 电影这样能全方位展示的多媒体可能也不再是单纯的梦想。</p>
+
+<h3 id="core-ml"><a href="https://developer.apple.com/machine-learning/">Core ML</a></h3>
+
+<p>使用 Core ML，可以将训练好的机器学习模型整合到你的应用中。简单来说就是使用大量已有的数据和正确的结果，来对建造的模型进行训练或改进，使模型具有实际的使用价值。比如一条街道的完全信息覆盖，训练模型可以看做是该街道所有店面、公共设施的数据信息（比如地理位置），通过大量的数据整合到训练模型中，你就可以通过简单的一些输入信息，来获取特定的输出结果。因此Core ML 所扮演的角色就是是将已经训练好的模型转换为 iOS 可以理解的形式，并且将新的数据“喂给”模型，从而获取输出。</p>
+
+<p>Core ML 在背后驱动了 iOS 的视觉识别的 Vision 框架和 Foundation 中的语义分析相关 API。普通开发者可以从这些高层的 API 中直接获益，比如人脸图片或者文字识别等。这部分内容在以前版本的 SDK 中也存在，不过在 iOS 11 SDK 中它们被集中到了新的框架中，并将一些更具体和底层的控制开放出来。比如你可以使用 Vision 中的高层接口，但是同时指定底层所使用的模型。这给 iOS 的计算机视觉带来了新的可能。这方面可以参考下<a href="https://juejin.im/entry/5937d251a0bb9f005807c582">这篇关于Core ML应用</a>;</p>
+
+<h3 id="小知识点">小知识点</h3>
 <ul>
-  <li><strong>xocde</strong></li>
+  <li><a href="https://developer.apple.com/documentation/uikit/drag_and_drop">拖拽 - Drag and Drop</a> 
+<img src="https://docs-assets.developer.apple.com/published/d8a3490e51/5feafe54-90b2-4bd0-9593-3f0ea138df4c.png" alt="drag in pad" />
+    <ol>
+      <li>在具有分屏功能的pad中，该功能具有很好的表现力，而iPhone上，则只体现在单个应用程序中。</li>
+      <li>如原生支持拖拽的UITextView 和 UITextField，UICollectionView 和 UITableView的拖拽有一系列专用的 delegate 来表明拖拽的发生和结束。而你也可以对任意 UIView 子类定义拖拽行为。</li>
+      <li>和 mac 上的拖拽不同，iOS 的拖拽充分尊重了多点触控的屏幕，所以可能你需要对一次多个的拖拽行为做些特别处理。</li>
+    </ol>
+  </li>
+  <li>
+    <p><a href="https://developer.apple.com/videos/play/wwdc2017/206/">Auto Fill</a> - UITextInputTraits 的 textContentType 中添加了 username 和 password，对适合的 textView 或者 textField 的 contentType 进行配置，就可以在要求输入用户名密码时获取键盘上方的自动填充，帮助用户快速登录，提供更友好的用户体验。</p>
+  </li>
+  <li>
+    <p><a href="https://developer.apple.com/documentation/fileprovider">FileProvider</a> 和 <a href="https://developer.apple.com/documentation/fileprovider">FileProviderUI</a> - 开放了让其他应用程序访问由包含的应用程序存储和管理的文档和目录。
+FileProviderUI则提供了一套类似Files app的界面，让你可以获取用户设备上或者云端的文件，具体还没测，读者可以亲自测试下试试。</p>
+  </li>
+  <li>
+    <p>不再支持 32 位 app - 虽然在 beta 1 中依然可以运行 32 位 app，但是 Apple 明确指出了将在后续的 iOS 11 beta 中取消支持。所以如果你想让自己的程序运行在 iOS 11 的设备上，进行 64 位的重新编译是必须步骤。</p>
+  </li>
+  <li>
+    <p><a href="https://developer.apple.com/documentation/devicecheck">DeviceCheck</a> - 每天要用广告 ID 追踪用户的开发者现在有了更好地选择 (当然前提是用来做正经事儿)。该FrameWork允许你通过你的服务器与 Apple 服务器通讯，并为单个设备设置两个 bit 的数据。简单说，你在设备上用 DeviceCheck API 生成一个 token，然后将这个 token 发给自己的服务器，再由自己的服务器与 Apple 的 API 进行通讯，来更新或者查询该设备的值。这两个 bit 的数据用来追踪用户比如是否已经领取奖励这类信息。</p>
+  </li>
+  <li>
+    <p><a href="https://developer.apple.com/documentation/pdfkit">PDFKit</a> - 这是一个在 macOS 上已经长期存在的框架，但却在 iOS 上姗姗来迟。你可以使用这个框架显示和操作 pdf 文件。</p>
+  </li>
+  <li>
+    <p><a href="https://developer.apple.com/documentation/identitylookup">IdentityLookup</a> - 可以自己开发一个 app extension 来拦截系统 SMS 和 MMS 的信息。系统的信息 app 在接到未知的人的短信时，会询问所有开启的过滤扩展，如果扩展表示该消息应当被拦截，那么这则信息将不会传递给你。扩展有机会访问到事先指定的 server 来进行判断 (所以说你可以光明正大地获取用户短信内容了，不过当然考虑到隐私，这些访问都是匿名加密的，Apple 也禁止这类扩展在 container 里进行写入)。</p>
+  </li>
+  <li><a href="https://developer.apple.com/documentation/corenfc">Core NFC</a> - 在 iPhone 7 和 iPhone 7 Plus 上提供基础的近场通讯读取功能。看起来很 promising，只要你有合适的 NFC 标签，手机就可以进行读取。但是考虑到无法后台常驻，实用性就打了折扣。不过笔者不是很熟这块，也许能有更合适的场景也未可知。</li>
 </ul>
 
-<p>作为iOS开发者，相信小伙伴们最熟悉的IDE了，这个就不过多介绍了，需要的在App Store或是到Apple开发者官网上下载即可。需要注意的是React Native目前需要Xcode7.0 或更高版本。</p>
+<h3 id="xcode">xcode</h3>
 
 <ul>
-  <li><strong>Homebrew</strong></li>
+  <li><strong>编辑器和编译器</strong></li>
 </ul>
 
-<p><a href="https://brew.sh/">Homebrew</a>（<a href="https://www.zybuluo.com/phper/note/87055">常用使用方法</a>）, Mac系统的包管理器，能在Mac中方便的安装软件或者卸载软件，相当于linux下的apt-get、yum神器；Homebre可以在Mac上安装一些OS X没有的UNIX工具，Homebrew将这些工具统统安装到了 /usr/local/Cellar 目录中，并在 /usr/local/bin 中创建符号链接。这里我们用它来安装NodeJS和一些其他必需的工具软件，下面推荐自己在使用的配置，仅作参考。</p>
+<p>Xcode 9 中编辑器进行了重写，支持了对 Swift 代码的重构 (虽然还很基础)，将 VCS 提到了更重要的位置，并添加了 GitHub 集成，可以进行同局域网的无线部署和调试。
+Xcode 9 中的索引系统也使用了新的引擎，据称在大型项目中搜索最高可以达到 50 倍的速度。</p>
 
 <ul>
-  <li><strong>Node</strong></li>
+  <li><strong>Named Color</strong></li>
 </ul>
 
-<p>使用上面的Homebrew来安装<a href="https://nodejs.org/en/">Node.js</a>，基于Chrome JavaScript 运行时建立的一个平台。关于<a href="http://www.runoob.com/nodejs/nodejs-tutorial.html">Node.js的资源学习</a>，可自行参考.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>brew install node
-</code></pre>
-</div>
-<ul>
-  <li><strong>React Native的命令行工具（react-native-cli）</strong></li>
-</ul>
-
-<p>React Native的命令行工具用于执行创建、初始化、更新项目、运行打包服务（packager）等任务。</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>npminstall -g react-native-cli
-</code></pre>
-</div>
-
-<p>注意：如果你看到EACCES: permission denied这样的权限报错，那么请参照上文的homebrew译注，修复/usr/local目录的所有权：</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo chown -R `whoami` /usr/local
-</code></pre>
-</div>
-
-<ul>
-  <li><strong>Sublime Text</strong></li>
-</ul>
-
-<p>用于编写、运行和调试React Native应用，我自己用的是这个。</p>
-
-<p>React Native开发中推荐的一些插件：</p>
-
-<p>ReactJS : 支持React开发，代码提示，高亮显示</p>
-
-<p>Emmet ：前端开发必备。</p>
-
-<p>Terminal : 在sublime中打开终端并定位到当前目录，神器，mac下的快捷键为：command+shift+T</p>
-
-<p>react-native-snippets：react native 的代码片段</p>
-
-<p>当然还有Facebook提供的基于atom的<a href="https://nuclide.io/">Nuclide</a>，<a href="https://www.jetbrains.com/webstorm/">webstorm</a>，<a href="https://www.google.com.hk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0ahUKEwid5viAndzOAhWMFSwKHS6kCgAQFggcMAA&amp;url=https%3a%2f%2fcode%2evisualstudio%2ecom%2f&amp;usg=AFQjCNFJKyN71_pTGlo3tbjTpAWVghKtHg">Visual Studio Code</a>等编辑器。关于这几个编译器的配置推荐小伙伴可以参考这边文章<a href="http://www.infoq.com/cn/articles/react-native-ide">React Native 开发之 IDE 选型和配置</a>，自行选择使用学习。</p>
-
-<ul>
-  <li><strong>Watchman (推荐使用)</strong></li>
-</ul>
-
-<p>Watchman是由Facebook提供的监视文件系统变更的工具。安装此工具可以提高开发时的性能（packager可以快速捕捉文件的变化从而实现实时刷新）。</p>
-
-<ul>
-  <li><strong>Flow</strong></li>
-</ul>
-
-<p><a href="https://flow.org/">Flow</a>是一个静态的JS类型检查工具。</p>
-
-<p>注：你在很多示例中看到的奇奇怪怪的冒号问号，以及方法参数中像类型一样的写法，都是属于这个flow工具的语法。这一语法并不属于ES标准，只是Facebook自家的代码规范。所以新手可以直接跳过（即不需要安装这一工具，也不建议去费力学习flow相关语法）。</p>
-
-<hr />
-
-<p>以上基本就是我自己所搭建的环境，当然上面的一些工具也可以自行选择自己熟悉的。如果您有什么好的IDE欢迎交流推荐。另外，上面如果有未安装成功的小伙伴也可以留言给我，一起解决问题。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/6/6/7d2b28f4fafadf52b165dac094169dab" alt="xcassets 里添加颜色" /></p>
 
 
 
@@ -311,15 +291,10 @@
        <ul class="pager">
         
         <li class="previous">
-            <a href="/2016/06/Sublime-%E9%85%8D%E7%BD%AEsuble%E5%91%BD%E4%BB%A4%E8%A1%8C/" data-toggle="tooltip" data-placement="top" title="Sublime	配置subl命令行">上一篇：  <span>Sublime	配置subl命令行</span>
+            <a href="/2016/08/RN-Mac%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-iOS/" data-toggle="tooltip" data-placement="top" title="react-native Mac-iOS 开发环境搭建">上一篇：  <span>react-native Mac-iOS 开发环境搭建</span>
             </a>
         </li>
         
-        
-        <li class="next">
-            <a href="/2017/06/iOS-11-SDK%E6%96%B0%E7%89%B9%E6%80%A7/" data-toggle="tooltip" data-placement="top" title="iOS 11 SDK新特性记录">下一篇：  <span>iOS 11 SDK新特性记录</span>
-            </a>
-        </li>
         
     </ul>
 </section>
@@ -331,8 +306,8 @@
     <script>
     
     var disqus_config = function () {
-        this.page.url = "http://localhost:4000/2016/08/RN-Mac%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-iOS/";
-        this.page.identifier = "/2016/08/RN-Mac%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-iOS/";
+        this.page.url = "http://localhost:4000/2017/06/iOS-11-SDK%E6%96%B0%E7%89%B9%E6%80%A7/";
+        this.page.identifier = "/2017/06/iOS-11-SDK%E6%96%B0%E7%89%B9%E6%80%A7/";
     };
 
     var disqus_shortname = 'LL86';
