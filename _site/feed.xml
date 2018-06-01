@@ -5,8 +5,8 @@
     <description>Success means Do a little bit more every day</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 01 Jun 2018 15:21:00 +0800</pubDate>
-    <lastBuildDate>Fri, 01 Jun 2018 15:21:00 +0800</lastBuildDate>
+    <pubDate>Fri, 01 Jun 2018 15:34:36 +0800</pubDate>
+    <lastBuildDate>Fri, 01 Jun 2018 15:34:36 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -88,8 +88,6 @@ struct objc_method {
       <item>
         <title>iOS 11 SDK新特性记录</title>
         <description>&lt;h3 id=&quot;arkit&quot;&gt;&lt;a href=&quot;https://developer.apple.com/documentation/arkit&quot;&gt;ARKit&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://dn-mhke0kuv.qbox.me/5600f4a9b69ce3fe99cf&quot; alt=&quot;AR&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;还记得之前支付宝和QQ的AR红包活动，包括去年大火的Pokémon Go AR游戏面世，这项技术应用到iOS端，渐渐吸引了我们的目光。&lt;/p&gt;
 
