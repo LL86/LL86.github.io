@@ -5,9 +5,85 @@
     <description>Success means Do a little bit more every day</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 16 May 2018 15:27:58 +0800</pubDate>
-    <lastBuildDate>Wed, 16 May 2018 15:27:58 +0800</lastBuildDate>
+    <pubDate>Fri, 01 Jun 2018 15:21:00 +0800</pubDate>
+    <lastBuildDate>Fri, 01 Jun 2018 15:21:00 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Runtime 整理</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Objective-C 作为一门动态语言，其动态性就表现在利用运行时系统（runtime）来动态得创建类和对象、进行消息传递和转发。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;对于高级编程语言来说，想要成为可执行文件需要先编译为汇编语言再汇编为机器语言，机器语言也是计算机能够识别的唯一语言，但是OC并不能直接编译为汇编语言，而是要先转写为纯C语言再进行编译和汇编的操作，从OC到C语言的过渡就是由runtime来实现的。然而我们使用OC进行面向对象开发，而C语言更多的是面向过程开发，这就需要将面向对象的类转变为面向过程的结构体。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;&lt;/h2&gt;
+
+&lt;p&gt;首先我们看下runtime中关于类(class)、对象(object)、方法(method)的结构体的组成：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+
+//对象
+struct objc_object {
+    Class isa  OBJC_ISA_AVAILABILITY;
+};
+
+//类
+struct objc_class {
+    Class isa  OBJC_ISA_AVAILABILITY;
+
+#if !__OBJC2__
+
+    Class super_class                                        OBJC2_UNAVAILABLE;
+    const char *name                                         OBJC2_UNAVAILABLE;
+    long version                                             OBJC2_UNAVAILABLE;
+    long info                                                OBJC2_UNAVAILABLE;
+    long instance_size                                       OBJC2_UNAVAILABLE;
+    struct objc_ivar_list *ivars                             OBJC2_UNAVAILABLE;
+    struct objc_method_list **methodLists                    OBJC2_UNAVAILABLE;
+    struct objc_cache *cache                                 OBJC2_UNAVAILABLE;
+    struct objc_protocol_list *protocols                     OBJC2_UNAVAILABLE;
+
+#endif
+} OBJC2_UNAVAILABLE;
+
+//方法列表
+struct objc_method_list {
+
+    struct objc_method_list *obsolete                        OBJC2_UNAVAILABLE;
+    int method_count                                         OBJC2_UNAVAILABLE;
+
+#ifdef __LP64__
+
+    int space                                                OBJC2_UNAVAILABLE;
+
+#endif
+    /* variable length structure */
+    struct objc_method method_list[1]                        OBJC2_UNAVAILABLE;
+    
+}                                                            OBJC2_UNAVAILABLE;
+
+//方法
+struct objc_method {
+
+    SEL method_name                                          OBJC2_UNAVAILABLE;
+    char *method_types                                       OBJC2_UNAVAILABLE;
+    IMP method_imp                                           OBJC2_UNAVAILABLE;
+}
+
+&lt;/code&gt;&lt;pre&gt;
+&lt;/pre&gt;&lt;/pre&gt;
+</description>
+        <pubDate>Tue, 12 Sep 2017 23:15:06 +0800</pubDate>
+        <link>http://localhost:4000/2017/09/Runtime-%E8%BF%90%E7%94%A8/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/09/Runtime-%E8%BF%90%E7%94%A8/</guid>
+        
+        <category>iOS</category>
+        
+        
+      </item>
     
       <item>
         <title>iOS 11 SDK新特性记录</title>
